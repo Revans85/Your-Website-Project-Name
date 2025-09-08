@@ -4,29 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebeccas Project </title>
-    <style> 
-
-        
+    <style>
+        body{width: 800px; height: 800px; padding: 50px;  margin: 20px;}
+        h1 {border-style: dotted;}
+        h2 {border-style: round;}
+        div b {color: yellow; text-align: center; padding-left: 14px;}
+        div i {color: chocolate; padding-left: 20px;}
+        main {background-color: aqua; width: 500px; height: 500px; text-align: center; border: 15px solid green;}
+        main > div {width: 100px; height: 100px; float: left; text-shadow: azure; padding-top: 3px;}
+        div p {float: left;}
+        div img {clear: left; width: 60px;}
+        #panel {display: none;}        
     </style>
 </head>
 <body>
-   <div id="container" style="width: 800px; background-color: aquamarine; height: 600px; margin: 0 auto;">
-    <header title="header-column"></header>
+   <header title="header-column"></header>
     <nav></nav>
     <main>
-        <h1 title="Header1"> Bacon </h1>
-        <img src="images/bacon.jpg" style="width:600px;"/>
-        <h2 title="Header2-bold"><b> Carrots </b></h2>
-        <img src="images/carrot.jpg" style="width:600px;"/>
-        <h3 title="Header3-bold"><i> Sausage </i></h3>
-        <img src="images/sausage.jpg" style="width:600px;"/>
+        <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
+        <h4 style="text-align: center;"> Here's our menu</h4>
+        <div>
+            <div class="container">
+                <p>Bacon </p>
+                <img src="images/bacon.jpg"/>
+            </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <b> <p>Carrots </p></b>
+            <img src="images/carrot.jpg"/>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <i> <p>Sausage </p></i></h3>
+            <img src="images/sausage.jpg"/>
+        </div>
+        <br/>
+        <br/>
+        </div>
+        <br/>
+        <br/>
+        
     </main>
-    <footer></footer>
+    <footer><div class="content">
+            <p class="flip" onclick="myFunction()">Do you like Bacon?</p>
+            <div id="panel">
+                <br/>
+                <br/>
+                <p style="padding-top: 10px;">ME TOO!</p>
+            </div>
+        </div>
 
-
-
-
-
-   </div>
+        <script>
+function myFunction() {
+  document.getElementById("panel").style.display = "block";
+}
+</script></footer>
 </body>
 </html>
