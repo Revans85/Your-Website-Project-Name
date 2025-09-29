@@ -6,15 +6,21 @@
     <title>Rebeccas Project </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <style>
-        body{width: 800px; height: 800px; padding: 50px;  margin: 20px;}
+        table, td, th {border: 1px solid #ddd;text-align: left;}
+        table {border-collapse: collapse;width: 100%;}
+        th, td { padding: 10px;}
+        body{width: 1200px; height: 1200px; padding: 50px;  margin: 20px;}
         h1 {border-style: dotted;}
         h2 {border-style: round;}
+        dt {color: black; text-align: left;}
+        dd {color: brown;text-align: left}
         div b {color: yellow; text-align: center; padding-left: 14px;}
         div i {color: chocolate; padding-left: 20px;}
-        main {background-color: aqua; width: 500px; height: 500px; text-align: center; border: 15px solid green;}
-        main > div {width: 100px; height: 100px; float: left; text-shadow: azure; padding-top: 3px;}
-        div p {float: left;}
-        div img {clear: left; width: 60px;}
+        main {background-color: aqua; width: 800px; height: 800px; text-align: center; border: 15px solid green;}
+        main > div {width: 790px; height: 790px; float: left; text-shadow: azure; padding-top: 3px;}
+        li p {float: left; }
+        li img {clear: right; width: 60px; text-align: left;}
+        li {text-align: left;}
         .flip {font-family: "Sofia", sans-serif; font-size:medium ; color:black}
         .flip:hover{background-color: aqua;}
         .flip:focus{background-color: cadetblue;}
@@ -22,7 +28,8 @@
         a:active{background-color: aliceblue;}
         a:hover{background-color: aqua;}
         a:visited{background-color: blueviolet;}
-        #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}        
+        #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}
+        #container {text-align: left;}        
     </style>
 </head>
 <body>
@@ -31,32 +38,59 @@
     <main>
         <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
         <h4 style="text-align: center;"> Here's our menu</h4>
-        <div>
             <div class="container">
-                <p>Bacon </p>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a>
+                <h3>Coffee</h3>
+                <dl>
+                    <dt>Black Coffee &#9749; </dt>
+                    <dd> Classic bold roasted coffer served with traditional creamers and syrups</dd>
+                    <dt>Vietnames White &#x1f1fb; &#x1f1f3; &#x2615;</dt>
+                    <dd> Pre-Sweetened blend of Vietnamese milk and spices creating a uniquely smooth cup of joe</dd>
+                    <dt>Caffeine Free &#x2615;</dt>
+                    <dd> For those with heart conditions that still crave a delicious cup of joe</dd>
+                </dl>
+                <h3>Breakfast Items</h3>
+                <ul>
+                    <li> Bacon <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a></li>
+                    <li> Carrots <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a></li>
+                    <li> Sausage <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a></li>
+                </ul>
+                <br/>
+                <h3>Breakfast Combos</h3>
+                <table>
+                    <tr>
+                        <th>Combo</th>
+                        <th>Price</th>
+                        <th>Avg Savings</th>
+                    </tr>
+                    <tr>
+                        <td>White Coffee Bacon</td>
+                        <td>$3</td>
+                        <td>$6</td>
+                    </tr>
+                    <tr>
+                        <td>Coffee and 1 breakfast item</td>
+                        <td>$5</td>
+                        <td>$4</td>
+                    </tr>
+                    <tr>
+                        <td>Veggie Coffee combo</td>
+                        <td>$2</td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td>All meat combo</td>
+                        <td>$6</td>
+                        <td>$2</td>
+                    </tr>
+                </table>
             </div>
         <br/>
         <br/>
-        <div class="container">
-            <b> <p>Carrots </p></b>
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a>
-        </div>
-        <br/>
-        <br/>
-        <div class="container">
-            <i> <p>Sausage </p></i></h3>
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a>
-        </div>
-        <br/>
-        <br/>
-        </div>
-        <br/>
-        <br/>
-        
-    </main>
-    <footer><div class="content">
-            <p class="flip" onclick="myFunction()">Do you like Bacon?</p>
+        <h3>Visit our local honey distribution partner</h3>
+                <iframe src="https://lovable.dev/projects/d7b54ecd-00f5-4904-88ed-1b9c6b9895e7" width="100%" height="300">
+                </iframe>
+       <div class="content">
+            <p class="flip" onclick="myFunction()">Do you like Honey?</p>
             <div id="panel">
                 <br/>
                 <br/>
@@ -65,9 +99,11 @@
         </div>
 
         <script>
-function myFunction() {
-  document.getElementById("panel").style.display = "block";
-}
-</script></footer>
+function myFunction() {document.getElementById("panel").style.display = "block";}
+</script>
+        
+    </main>
+    <footer>
+</footer>
 </body>
 </html>
