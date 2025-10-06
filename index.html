@@ -16,7 +16,8 @@
         dd {color: brown;text-align: left}
         div b {color: yellow; text-align: center; padding-left: 14px;}
         div i {color: chocolate; padding-left: 20px;}
-        main {background-color: aqua; width: 800px; height: 800px; text-align: center; border: 15px solid green;}
+        form {background-color: aliceblue;}
+        main {background-color: aqua; width: 820px; height: 820px; text-align: center; border: 15px solid green;}
         main > div {width: 790px; height: 790px; float: left; text-shadow: azure; padding-top: 3px;}
         li p {float: left; }
         li img {clear: right; width: 60px; text-align: left;}
@@ -41,48 +42,56 @@
             <div class="container">
                 <h3>Coffee</h3>
                 <dl>
-                    <dt>Black Coffee &#9749; </dt>
+                    <dt>Black Coffee &#9749; <input type="checkbox"> </dt>
                     <dd> Classic bold roasted coffer served with traditional creamers and syrups</dd>
-                    <dt>Vietnames White &#x1f1fb; &#x1f1f3; &#x2615;</dt>
+                    <dt>Vietnames White &#x1f1fb; &#x1f1f3; &#x2615; <input type="checkbox"> </dt>
                     <dd> Pre-Sweetened blend of Vietnamese milk and spices creating a uniquely smooth cup of joe</dd>
-                    <dt>Caffeine Free &#x2615;</dt>
+                    <dt>Caffeine Free &#x2615; <input type="checkbox"> </dt>
                     <dd> For those with heart conditions that still crave a delicious cup of joe</dd>
                 </dl>
                 <h3>Breakfast Items</h3>
                 <ul>
-                    <li> Bacon <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a></li>
-                    <li> Carrots <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a></li>
-                    <li> Sausage <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a></li>
+                    <li> Bacon <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a> <input type="checkbox"></li>
+                    <li> Carrots <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a> <input type="checkbox"></li>
+                    <li> Sausage <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a> <input type="checkbox"></li>
                 </ul>
                 <br/>
                 <h3>Breakfast Combos</h3>
+                <form>
                 <table>
                     <tr>
                         <th>Combo</th>
                         <th>Price</th>
                         <th>Avg Savings</th>
+                        <th>Selected</th>
                     </tr>
                     <tr>
                         <td>White Coffee Bacon</td>
                         <td>$3</td>
                         <td>$6</td>
+                        <td><input type="checkbox"></td>
                     </tr>
                     <tr>
                         <td>Coffee and 1 breakfast item</td>
                         <td>$5</td>
                         <td>$4</td>
+                        <td><input type="checkbox"></td>
                     </tr>
                     <tr>
                         <td>Veggie Coffee combo</td>
                         <td>$2</td>
                         <td>$5</td>
+                        <td><input type="checkbox"></td>
                     </tr>
                     <tr>
                         <td>All meat combo</td>
                         <td>$6</td>
                         <td>$2</td>
+                        <td><input type="checkbox"></td>
                     </tr>
                 </table>
+                <input type="submit" style="background-color: silver;">
+                </form>
             </div>
         <br/>
         <br/>
@@ -96,14 +105,38 @@
                 <br/>
                 <p style="padding-top: 10px;">ME TOO!</p>
             </div>
+            <canvas id="myCanvas" width="200" height="125">
+                Back to top of page
+            </canvas>
+            <audio controls autoplay>
+                <source src="audio/Chicken Wings.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
 
         <script>
 function myFunction() {document.getElementById("panel").style.display = "block";}
 </script>
+
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+
+ctx.moveTo(100,20);
+
+ctx.lineTo(180,100);
+ctx.lineTo(20,100);
+ctx.lineTo(100,20);
+
+ctx.stroke();
+</script>
         
     </main>
-    <footer>
+<footer>
+
 </footer>
 </body>
 </html>
