@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebeccas Project - Checkout </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <style>
+        .crumbs ol { list-style-type: none;padding-left: 0;}
+        .crumbs li { color:black}
+        .crumb {display: inline-block;}
+        .crumb a::after {display: inline-block;color: black;content: "--";font-size: 80%;font-weight: bold;padding: 0 3px;}
+        #myList {list-style: none; padding: 0;}
+        #myList li {display: flex; justify-content: space-between;
+            align-items: center; padding: 8px; border-bottom: 1px solid #eee;}
+        .delete-button {background-color: #f44336; color: white;
+            border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px;}
+        .delete-button:hover {background-color: #da190b;}
+        table, td, th {border: 1px solid #ddd;text-align: left;}
+        table {border-collapse: collapse;width: 100%;}
+        th, td { padding: 10px;}
+        body{width: 1200px; height: 1200px; padding: 50px;  margin: 20px;}
+        h1 {border-style: dotted;}
+        h2 {border-style: round;}
+        dt {color: black; text-align: left;}
+        dd {color: brown;text-align: left}
+        div b {color: yellow; text-align: center; padding-left: 14px;}
+        div i {color: chocolate; padding-left: 20px;}
+        form {background-color: aliceblue;}
+        main {background-color: aqua; width: 820px; height: 820px; text-align: center; border: 15px solid green;}
+        main > div {width: 790px; height: 790px; float: left; text-shadow: azure; padding-top: 3px;}
+        li p {float: left; }
+        li img {clear: right; width: 60px; text-align: left;}
+        li {text-align: left;}
+        .flip {font-family: "Sofia", sans-serif; font-size:medium ; color:black}
+        .flip:hover{background-color: aqua;}
+        .flip:focus{background-color: cadetblue;}
+        a:active{background-color: aliceblue;}
+        a:hover{background-color: aqua;}
+        a:visited{background-color: blueviolet;}
+        #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}
+        #container {text-align: left; display: flex;}
+        .row {display: flex; flex-wrap: wrap; padding: 0 4px;}
+        .column {flex: 25%; max-width: 25%; padding: 0 4px;}    
+    </style>
+</head>
+<body>
+   <header title="header-column"></header>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a></li>
+            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a></li>
+    </ol>
+    </nav>
+    <main>
+        <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
+        <h4 style="text-align: center;"> Shopping Cart</h4>
+            <div class="container">
+                <ul id="myList">
+                    <div class="row">
+                        <li>Item 1 <button class="delete-button">X</button> </li>
+                    </div>
+                    <div class="row">
+                        <li>Item 2 <button class="delete-button">X</button> </li>
+                    </div>
+                    <div class="row">
+                        <li>Item 3 <button class="delete-button">X</button> </li>
+                    </div>
+                    <div class="row">
+                        <li>Item 4 <button class="delete-button">X</button> </li>
+                    </div>
+                    <div class="row">
+                        <li>Item 5 <button class="delete-button">X</button> </li>
+                    </div>
+                </ul>
+                <div class="row">
+                    <div class="column"></div>
+                        <audio controls autoplay>
+                            <source src="audio/Chicken Wings.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                </div>
+            </div>
+
+    <script>
+    document.getElementById('myList').addEventListener('click', function(event) {
+    if (event.target.classList.contains('delete-button')) {
+    const listItem = event.target.parentNode;
+    listItem.parentNode.removeChild(listItem);}});
+    </script>
+
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
