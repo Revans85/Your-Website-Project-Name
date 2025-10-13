@@ -6,6 +6,10 @@
     <title>Rebeccas Project </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <style>
+        .crumbs ol { list-style-type: none;padding-left: 0;}
+        .crumbs li { color:black}
+        .crumb {display: inline-block;}
+        .crumb a::after {display: inline-block;color: black;content: "--";font-size: 80%;font-weight: bold;padding: 0 3px;}
         table, td, th {border: 1px solid #ddd;text-align: left;}
         table {border-collapse: collapse;width: 100%;}
         th, td { padding: 10px;}
@@ -35,7 +39,12 @@
 </head>
 <body>
    <header title="header-column"></header>
-    <nav></nav>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a></li>
+            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a></li>
+    </ol>
+    </nav>
     <main>
         <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
         <h4 style="text-align: center;"> Here's our menu</h4>
