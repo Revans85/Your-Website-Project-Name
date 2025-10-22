@@ -12,7 +12,7 @@
         .crumb a::after {display: inline-block;color: black;content: "--";font-size: 80%;font-weight: bold;padding: 0 3px;}
         #myList {list-style: none; padding: 0;}
         #myList li {display: flex; justify-content: space-between;
-            align-items: center; padding: 8px; border-bottom: 1px solid #eee;}
+            align-items: center; padding: 8px; border-bottom: 1px solid #eee;} /* display flex enabled */
         .delete-button {background-color: #f44336; color: white;
             border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px;}
         .delete-button:hover {background-color: #da190b;}
@@ -40,8 +40,8 @@
         a:visited{background-color: blueviolet;}
         #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}
         #container {text-align: left; display: flex;}
-        .row {display: flex; flex-wrap: wrap; padding: 0 4px;}
-        .column {flex: 25%; max-width: 25%; padding: 0 4px;}    
+        .row {display: flex; flex-wrap: wrap; padding: 0 4px;} /*Displayed using flex, flex wrapped */
+        .column {flex: 25%; max-width: 25%; padding: 0 4px;}   /*flex 25% */
     </style>
 </head>
 <body>
@@ -56,7 +56,7 @@
         <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
         <h4 style="text-align: center;"> Shopping Cart</h4>
             <div class="container">
-                <ul id="myList">
+                 <ul id="myList"> <!--/* flex used on li items */ -->
                     <div class="row">
                         <li>Item 1 <button class="delete-button">X</button> </li>
                     </div>
@@ -73,8 +73,8 @@
                         <li>Item 5 <button class="delete-button">X</button> </li>
                     </div>
                 </ul>
-                <div class="row">
-                    <div class="column"></div>
+                <div class="row"> <!--/* flex used on row */ -->
+                    <div class="column"></div> <!--/* flex used at 25% per column */ -->
                         <audio controls autoplay>
                             <source src="audio/Chicken Wings.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
