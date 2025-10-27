@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebeccas Project </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <!-- <link rel="stylesheet" src="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        .crumbs ol { list-style-type: none;padding-left: 0;}
-        .crumbs li { color:black}
-        .crumb {display: inline-block;}
-        .crumb a::after {display: inline-block;color: black;content: "--";font-size: 80%;font-weight: bold;padding: 0 3px;}
         table, td, th {border: 1px solid #ddd;text-align: left;}
         table {border-collapse: collapse;width: 100%;}
         th, td { padding: 10px;}
-        body{width: 1200px; height: 1200px; padding: 50px;  margin: 20px;}
         h1 {border-style: dotted;}
         h2 {border-style: round;}
         dt {color: black; text-align: left;}
@@ -21,11 +22,9 @@
         div b {color: yellow; text-align: center; padding-left: 14px;}
         div i {color: chocolate; padding-left: 20px;}
         form {background-color: aliceblue;}
-        main {background-color: aqua; width: 820px; height: 820px; text-align: center; border: 15px solid green;}
-        main > div {width: 790px; height: 790px; float: left; text-shadow: azure; padding-top: 3px;}
-        li p {float: left; }
+        body{background-color: black;}
+        main {background-color: goldenrod; width: 90%; height: 90%; text-align: center; border: 15px solid brown;}
         li img {clear: right; width: 60px; text-align: left;}
-        li {text-align: left;}
         .flip {font-family: "Sofia", sans-serif; font-size:medium ; color:black}
         .flip:hover{background-color: aqua;}
         .flip:focus{background-color: cadetblue;}
@@ -33,19 +32,50 @@
         a:hover{background-color: aqua;}
         a:visited{background-color: blueviolet;}
         #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}
-        #container {text-align: left;}        
+        #container {text-align: left;}  
+        .center-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh;
+        width: 100vw; 
+    }      
     </style>
 </head>
 <body>
+
    <header title="header-column"></header>
-    <nav class="crumbs">
-        <ol>
-            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a></li>
-            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a></li>
-    </ol>
+   <div class="container-fluid">
+    <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/images/Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">Welcome
+        </a>
+        <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a>
+        </li>
+      </ul>
     </nav>
-    <main>
+  </div>
+   <div class="center-container">
+        <div class="centered-content">
+            <main>
         <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
+        
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
         <h4 style="text-align: center;"> Here's our menu</h4>
             <div class="container">
                 <h3>Coffee</h3>
@@ -59,9 +89,9 @@
                 </dl>
                 <h3>Breakfast Items</h3>
                 <ul>
-                    <li> Bacon <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a> <input type="checkbox"></li>
-                    <li> Carrots <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a> <input type="checkbox"></li>
-                    <li> Sausage <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a> <input type="checkbox"></li>
+                    <li style="text-align: left;"> Bacon <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/bacon.jpg"/></a> <input type="checkbox"></li>
+                    <li style="text-align: left;"> Carrots <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/carrot.jpg"/></a> <input type="checkbox"></li>
+                    <li style="text-align: left;"> Sausage <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/sausage.jpg"/></a> <input type="checkbox"></li>
                 </ul>
                 <br/>
                 <h3>Breakfast Combos</h3>
@@ -106,6 +136,11 @@
         <h3>Visit our local honey distribution partner</h3>
                 <iframe src="https://lovable.dev/projects/d7b54ecd-00f5-4904-88ed-1b9c6b9895e7" width="100%" height="300">
                 </iframe>
+        <textarea id="promptInput" rows="5" cols="50" placeholder="Enter your prompt here..."></textarea>
+        <button id="generateButton">Generate Content</button>
+        <div id="output"></div>
+
+    <script src="scripts/ApiScript.js"></script>
        <div class="content">
             <p class="flip" onclick="myFunction()">Do you like Honey?</p>
             <div id="panel">
@@ -143,6 +178,9 @@ ctx.stroke();
 </script>
         
     </main>
+        </div>
+   </div>
+    
 <footer>
 
 </footer>
