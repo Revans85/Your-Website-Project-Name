@@ -5,94 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebeccas Project - Checkout </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <!-- <link rel="stylesheet" src="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        .crumbs ol { list-style-type: none;padding-left: 0;}
-        .crumbs li { color:black}
-        .crumb {display: inline-block;}
-        .crumb a::after {display: inline-block;color: black;content: "--";font-size: 80%;font-weight: bold;padding: 0 3px;}
-        #myList {list-style: none; padding: 0;}
-        #myList li {display: flex; justify-content: space-between;
-            align-items: center; padding: 8px; border-bottom: 1px solid #eee;} /* display flex enabled */
-        .delete-button {background-color: #f44336; color: white;
-            border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px;}
-        .delete-button:hover {background-color: #da190b;}
-        table, td, th {border: 1px solid #ddd;text-align: left;}
-        table {border-collapse: collapse;width: 100%;}
-        th, td { padding: 10px;}
-        body{width: 1200px; height: 1200px; padding: 50px;  margin: 20px;}
-        h1 {border-style: dotted;}
-        h2 {border-style: round;}
-        dt {color: black; text-align: left;}
-        dd {color: brown;text-align: left}
-        div b {color: yellow; text-align: center; padding-left: 14px;}
-        div i {color: chocolate; padding-left: 20px;}
-        form {background-color: aliceblue;}
-        main {background-color: aqua; width: 820px; height: 820px; text-align: center; border: 15px solid green;}
-        main > div {width: 790px; height: 790px; float: left; text-shadow: azure; padding-top: 3px;}
-        li p {float: left; }
-        li img {clear: right; width: 60px; text-align: left;}
-        li {text-align: left;}
-        .flip {font-family: "Sofia", sans-serif; font-size:medium ; color:black}
-        .flip:hover{background-color: aqua;}
-        .flip:focus{background-color: cadetblue;}
-        a:active{background-color: aliceblue;}
-        a:hover{background-color: aqua;}
-        a:visited{background-color: blueviolet;}
-        #panel {display: none; font-family: "Sofia", sans-serif; font-size:small; color:black}
-        #container {text-align: left; display: flex;}
-        .row {display: flex; flex-wrap: wrap; padding: 0 4px;} /*Displayed using flex, flex wrapped */
-        .column {flex: 25%; max-width: 25%; padding: 0 4px;}   /*flex 25% */
+        table, td, th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+        }
+        h1 {
+            border-style: dotted;
+        }
+        h2 {
+            border-style:groove;
+        }
+        dt {
+            color: black;
+            text-align: left;
+        }
+        dd {
+            color: brown;
+            text-align: left
+        }
+        div b {
+            color: yellow;
+            text-align: center;
+            padding-left: 14px;
+        }
+        div i {
+            color: chocolate;
+            padding-left: 20px;
+        }
+        form {
+            background-color: aliceblue;
+        }
+        body {
+            background-color: black;
+        }
+        main {
+            background-color: goldenrod;
+            width: 90%;
+            height: 90%;
+            text-align: center;
+            border: 15px solid brown;
+        }
+        li img {
+            clear: right;
+            width: 60px;
+            text-align: left;
+        }
+        .flip {
+            font-family: "Sofia", sans-serif;
+            font-size: medium;
+            color: black
+        }
+            .flip:hover {
+                background-color: aqua;
+            }
+            .flip:focus {
+                background-color: cadetblue;
+            }
+        a:active {
+            background-color: aliceblue;
+        }
+        a:hover {
+            background-color: aqua;
+        }
+        a:visited {
+            background-color: blueviolet;
+        }
+        #panel {
+            display: none;
+            font-family: "Sofia", sans-serif;
+            font-size: small;
+            color: black
+        }
+        #container {
+            text-align: left;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100vw;
+        }
     </style>
 </head>
 <body>
-   <header title="header-column"></header>
-    <nav class="crumbs">
-        <ol>
-            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a></li>
-            <li class="crumb"><a href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a></li>
-    </ol>
-    </nav>
-    <main>
-        <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
-        <h4 style="text-align: center;"> Shopping Cart</h4>
-            <div class="container">
-                 <ul id="myList"> <!--/* flex used on li items */ -->
-                    <div class="row">
+    <header title="header-column"></header>
+    <div class="container-fluid">
+        <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="/images/Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">Welcome
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://revans85.github.io/Your-Website-Project-Name/index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://revans85.github.io/Your-Website-Project-Name/Checkout">Checkout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="center-container">
+        <div class="centered-content">
+            <main>
+                <h1 title="Page Header" style="text-align: center; align-content: center;"> GG's Famous Bed and Breakfast</h1>
+                <h4 style="text-align: center;"> Shopping Cart</h4>
+                <div class="container">
+                    <ul id="myList">
+                        <!--/* flex used on li items */ -->
+                        
                         <li>Item 1 <button class="delete-button">X</button> </li>
-                    </div>
-                    <div class="row">
+
+
                         <li>Item 2 <button class="delete-button">X</button> </li>
-                    </div>
-                    <div class="row">
+
+
                         <li>Item 3 <button class="delete-button">X</button> </li>
-                    </div>
-                    <div class="row">
+
+
                         <li>Item 4 <button class="delete-button">X</button> </li>
-                    </div>
-                    <div class="row">
+
+
                         <li>Item 5 <button class="delete-button">X</button> </li>
-                    </div>
-                </ul>
-                <div class="row"> <!--/* flex used on row */ -->
-                    <div class="column"></div> <!--/* flex used at 25% per column */ -->
+
+                    </ul>
+                </div>
+                <div class="row">
+                    <!--/* flex used on row */ -->
+                    <div class="column">
+                        <!--/* flex used at 25% per column */ -->
                         <audio controls autoplay>
                             <source src="audio/Chicken Wings.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
+                    </div>
                 </div>
-            </div>
-
-    <script>
-    document.getElementById('myList').addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-button')) {
-    const listItem = event.target.parentNode;
-    listItem.parentNode.removeChild(listItem);}});
-    </script>
+        
 
 
-    </main>
+        <script>
+            document.getElementById('myList').addEventListener('click', function (event) {
+                if (event.target.classList.contains('delete-button')) {
+                    const listItem = event.target.parentNode;
+                    listItem.parentNode.removeChild(listItem);
+                }
+            });
+        </script>
+
+
+        </main>
+    </div>
+    </div>
     <footer>
-
     </footer>
 </body>
 </html>
